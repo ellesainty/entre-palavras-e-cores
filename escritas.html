@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Escritas</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fffafc;
-      color: #4a3c4a;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    h2 {
-      font-family: 'Playfair Display', serif;
-      color: #d17ea1;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 15px;
-    }
-    a {
-      text-decoration: none;
-      color: #d17ea1;
-      font-weight: 600;
-      font-size: 1.2rem;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<meta charset="UTF-8" />
+<title>Escritas</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fffafc;
+    color: #4a3c4a;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d17ea1;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .card {
+    background: #f9e6f2;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(209,126,161,0.2);
+    text-align: center;
+    text-decoration: none;
+    color: #4a3c4a;
+    transition: transform 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(209,126,161,0.4);
+  }
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 15px 10px 20px;
+    font-size: 1.3rem;
+  }
+</style>
 </head>
 <body>
   <h2>☆ Escritas</h2>
-  <ul>
-    <li><a href="poema-coracao.html">Guardamos no Coração</a></li>
-    <!-- Adicione aqui outros posts de Escritas -->
-  </ul>
+  <div class="gallery">
+    <a href="poema-coracao.html" class="card">
+      <img src="imagem-poema-coracao.jpg" alt="Guardamos no Coração" />
+      <h3>Guardamos no Coração</h3>
+    </a>
+    <a href="outro-post.html" class="card">
+      <img src="imagem-outro-post.jpg" alt="Título do Outro Post" />
+      <h3>Título do Outro Post</h3>
+    </a>
+    <!-- Adicione mais cards aqui -->
+  </div>
 </body>
 </html>
