@@ -2,46 +2,67 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
-<title>♡ Psicologia - Entre Palavras e Cores</title>
-
+<title>Escritas</title>
 <style>
-body {
-    background: linear-gradient(135deg, #ffe7f0, #fff9d9, #d9f0ff);
-    font-family: 'Comfortaa', cursive, sans-serif;
-    padding: 2rem;
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fffafc;
     color: #4a3c4a;
-    text-align: center;
-}
-h1 {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  h2 {
     font-family: 'Playfair Display', serif;
     color: #d17ea1;
-    margin-bottom: 0.2rem;
-}
-.emoji {
-    font-size: 2rem;
-    margin: 1rem 0;
-}
-p {
-    max-width: 600px;
-    margin: auto;
-    font-size: 1.1rem;
-}
-a {
-    display: inline-block;
-    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .card {
+    background: #f9e6f2;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(209,126,161,0.2);
+    text-align: center;
     text-decoration: none;
-    background-color: #d17ea1;
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-}
+    color: #4a3c4a;
+    transition: transform 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(209,126,161,0.4);
+  }
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 15px 10px 20px;
+    font-size: 1.3rem;
+  }
 </style>
-
 </head>
 <body>
-<div class="emoji">🧠</div>
-<h1>♡ Psicologia</h1>
-<p>Essa página ainda está sendo preenchida com amor, arte e palavras. Em breve, terá conteúdo especial aqui ✨</p>
-<a href="index.html">Voltar para o início</a>
+  <h2>♡ Psicologia</h2>
+  <div class="gallery">
+    <a href="psicologia-arte.html" class="card">
+      <img src="guardamos-no-coracao.png" alt="Introdução à Psicologia e Arte: A Conexão Entre a Mente e a Criatividade" />
+      <h3>Introdução à Psicologia e Arte: A Conexão Entre a Mente e a Criatividade</h3>
+    </a>
+    <a href="outro-post.html" class="card">
+      <img src="imagem-outro-post.jpg" alt="Título do Outro Post" />
+      <h3>Título do Outro Post</h3>
+    </a>
+    <!-- Adicione mais cards aqui -->
+  </div>
 </body>
 </html>
