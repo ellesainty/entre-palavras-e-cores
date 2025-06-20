@@ -1,47 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<title>Contato - Entre Palavras e Cores</title>
-
-<style>
-body {
-    background: linear-gradient(135deg, #ffe7f0, #fff9d9, #d9f0ff);
-    font-family: 'Comfortaa', cursive, sans-serif;
-    padding: 2rem;
-    color: #4a3c4a;
-    text-align: center;
-}
-h1 {
-    font-family: 'Playfair Display', serif;
-    color: #d17ea1;
-    margin-bottom: 0.2rem;
-}
-.emoji {
-    font-size: 2rem;
-    margin: 1rem 0;
-}
-p {
-    max-width: 600px;
-    margin: auto;
-    font-size: 1.1rem;
-}
-a {
-    display: inline-block;
-    margin-top: 2rem;
-    text-decoration: none;
-    background-color: #d17ea1;
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - Entre Palavras e Cores</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffe7f0, #fff9d9, #d9f0ff);
+      color: #4a3c4a;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #d17ea1;
+      font-size: 2.4rem;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffffcc;
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    input, textarea {
+      width: 90%;
+      max-width: 500px;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      background-color: #d17ea1;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #b8527a;
+    }
+  </style>
 </head>
 <body>
-<div class="emoji">📬</div>
-<h1>Contato</h1>
-<p>Essa página ainda está sendo preenchida com amor, arte e palavras. Em breve, terá conteúdo especial aqui ✨</p>
-<a href="index.html">Voltar para o início</a>
+  <header>
+    <h1>Fale Comigo</h1>
+  </header>
+  <div class="container">
+    <form action="https://formsubmit.co/seuemail@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <textarea name="message" rows="5" placeholder="Sua mensagem..." required></textarea>
+      
+      <!-- Redireciona para página de obrigado -->
+      <input type="hidden" name="_next" value="https://ellesainty.github.io/entre-palavras-e-cores/obrigado.html" />
+      <!-- Desativa captcha (opcional) -->
+      <input type="hidden" name="_captcha" value="false" />
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 </body>
 </html>
