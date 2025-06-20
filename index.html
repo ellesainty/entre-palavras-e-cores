@@ -3,214 +3,89 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Entre Palavras e Cores</title>
+<title>Entre Palavras e Cores - Blog</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Playfair+Display&display=swap');
   body {
-    margin: 0; padding: 0;
     font-family: 'Comfortaa', cursive, sans-serif;
     background: linear-gradient(135deg, #ffe7f0, #fff9d9, #d9f0ff);
     color: #4a3c4a;
-    min-height: 100vh;
+    margin: 0; padding: 20px;
   }
-  header {
-    text-align: center;
-    padding: 2rem 1rem 1rem;
-  }
-  header h1 {
+  h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    margin: 0;
     color: #d17ea1;
+    margin-bottom: 1rem;
   }
-  header p {
-    font-style: italic;
-    font-size: 1.1rem;
-    max-width: 480px;
-    margin: 0.5rem auto 1.5rem;
-    color: #a36d8c;
+  .post-list {
+    max-width: 700px;
+    margin: 0 auto;
   }
-  nav {
-    text-align: center;
-    margin-bottom: 2rem;
+  .post {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 8px rgba(209,126,161,0.1);
   }
-  nav a {
+  .post h2 {
+    margin-top: 0;
+    color: #b8527a;
+  }
+  .date {
+    font-size: 0.9rem;
+    color: #a87e94;
+    margin-bottom: 0.8rem;
+  }
+  .excerpt {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #5a4a5a;
+  }
+  .read-more {
     text-decoration: none;
-    display: inline-block;
-    margin: 0 0.7rem;
+    background-color: #d17ea1;
+    color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 1rem;
-    color: #7c5271;
-    background-color: rgba(255 255 255 / 0.7);
-    transition: background-color 0.3s ease, color 0.3s ease;
   }
-  nav a:hover {
-    background-color: #d17ea1;
-    color: #fff;
-  }
-  nav a span.symbol {
-    margin-right: 6px;
-    font-weight: normal;
-  }
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 1rem 3rem;
-  }
-  article.post {
-    background: rgba(255 255 255 / 0.85);
-    margin-bottom: 1.8rem;
-    padding: 1.5rem 1.2rem;
-    border-radius: 14px;
-    box-shadow: 1px 1px 10px rgba(131, 89, 107, 0.15);
-  }
-  article.post h2 {
-    margin-top: 0;
-    font-family: 'Playfair Display', serif;
-    color: #a44e7a;
-  }
-  article.post .category {
-    font-size: 0.85rem;
-    color: #b282a1;
-    margin-bottom: 0.5rem;
-  }
-  article.post p {
-    line-height: 1.45;
-    color: #6a536a;
-  }
-  article.post button {
-    margin-top: 1rem;
-    background-color: #d17ea1;
-    border: none;
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  article.post button:hover {
-    background-color: #b05379;
-  }
-  section.newsletter {
-    background: rgba(255 255 255 / 0.9);
-    max-width: 720px;
-    margin: 3rem auto 2rem;
-    padding: 2rem 2rem 2.5rem;
-    border-radius: 18px;
-    box-shadow: 1px 1px 12px rgba(131, 89, 107, 0.12);
-    text-align: center;
-  }
-  section.newsletter h3 {
-    margin-top: 0;
-    font-family: 'Playfair Display', serif;
-    color: #a44e7a;
-  }
-  section.newsletter p {
-    margin: 0.5rem 0 1.5rem;
-    color: #7c5271;
-    font-style: italic;
-  }
-  section.newsletter input[type=email] {
-    padding: 0.8rem 1rem;
-    width: 240px;
-    max-width: 100%;
-    font-size: 1rem;
-    border: 2px solid #d17ea1;
-    border-radius: 20px;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  section.newsletter input[type=email]:focus {
-    border-color: #b05379;
-  }
-  section.newsletter button {
-    margin-left: 1rem;
-    background-color: #d17ea1;
-    border: none;
-    padding: 0.8rem 1.6rem;
-    border-radius: 20px;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  section.newsletter button:hover {
-    background-color: #b05379;
-  }
-  footer {
-    text-align: center;
-    color: #a36d8c;
-    font-size: 0.9rem;
-    padding: 1rem 0 2rem;
-  }
-  @media (max-width: 600px) {
-    nav a {
-      margin: 0 0.4rem;
-      font-size: 0.9rem;
-      padding: 0.4rem 0.9rem;
-    }
-    article.post button {
-      width: 100%;
-    }
-    section.newsletter input[type=email] {
-      width: 100%;
-      margin-bottom: 0.8rem;
-    }
-    section.newsletter button {
-      width: 100%;
-      margin-left: 0;
-    }
+  nav a {
+    margin-right: 1rem;
+    color: #d17ea1;
+    text-decoration: none;
   }
 </style>
 </head>
 <body>
 <header>
   <h1>Entre Palavras e Cores</h1>
-  <p>“Transformo silêncio em fala, dor em arte e margem em caminho, porque existir, para mim, é resistir com beleza e propósito.”</p>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="reflexoes.html">☆ Reflexões</a>
+    <a href="psicologia.html">♡ Psicologia</a>
+    <a href="arte.html">✦ Arte</a>
+    <a href="estudos.html">❁ Estudos & Dicas</a>
+    <a href="escritas.html">✎ Escritas</a>
+    <a href="cronicas.html">✧ Crônicas</a>
+    <a href="sobre.html">Sobre Mim</a>
+    <a href="contato.html">Contato</a>
+  </nav>
 </header>
-<nav>
-  <a href="reflexoes.html"><span class="symbol">☆</span>Reflexões</a>
-  <a href="psicologia.html"><span class="symbol">♡</span>Psicologia</a>
-  <a href="arte.html"><span class="symbol">✦</span>Arte</a>
-  <a href="estudos.html"><span class="symbol">❁</span>Estudos & Dicas</a>
-  <a href="escritas.html"><span class="symbol">✎</span>Escritas</a>
-  <a href="cronicas.html"><span class="symbol">✧</span>Crônicas</a>
-  <a href="sobre.html">Sobre Mim</a>
-  <a href="contato.html">Contato</a>
-</nav>
 <main>
-  <article class="post">
-    <div class="category">☆ Reflexões</div>
-    <h2>A arte de sentir: entre poesia e cuidado</h2>
-    <p>Entre os pequenos gestos do cotidiano, a poesia se revela como forma de cura e expressão profunda da alma.</p>
-    <button>Ler mais</button>
-  </article>
-  <article class="post">
-    <div class="category">♡ Psicologia</div>
-    <h2>Psicologia não é só teoria, é afeto</h2>
-    <p>Compreender o comportamento humano é abraçar histórias e emoções que moldam quem somos.</p>
-    <button>Ler mais</button>
-  </article>
-  <article class="post">
-    <div class="category">✦ Arte</div>
-    <h2>Expressões que transformam</h2>
-    <p>Pinturas, desenhos e criações que carregam a energia da alma em cada traço e cor.</p>
-    <button>Ler mais</button>
-  </article>
-  <section class="newsletter">
-    <h3>Receba palavras que tocam, ideias que somam e arte que abraça o sentir.</h3>
-    <p>Assine a newsletter para não perder nenhum conteúdo novo.</p>
-    <form onsubmit="event.preventDefault(); alert('Obrigada por assinar, Elle! :)');">
-      <input type="email" placeholder="Seu melhor e-mail" required />
-      <button type="submit">Assinar</button>
-    </form>
+  <section class="post-list">
+    <article class="post">
+      <h2>Título do Post 1</h2>
+      <div class="date">20 de junho de 2025</div>
+      <p class="excerpt">Esse é um resumo do post 1. Aqui você pode colocar um trecho breve para despertar o interesse do leitor...</p>
+      <a href="post1.html" class="read-more">Ler mais</a>
+    </article>
+    <article class="post">
+      <h2>Título do Post 2</h2>
+      <div class="date">15 de junho de 2025</div>
+      <p class="excerpt">Esse é um resumo do post 2. Um pequeno texto para introduzir o tema e convidar a leitura completa...</p>
+      <a href="post2.html" class="read-more">Ler mais</a>
+    </article>
   </section>
 </main>
-<footer>
-  Feito com ♡ por Elle — Entre Palavras e Cores © 2025
-</footer>
 </body>
 </html>
